@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@resources/*": ["resources/*"],
+      "@contexts/*": ["contexts/*"],
+      "@utils/*": ["utils/*"],
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -22,5 +29,5 @@
   },
   "include": [
     "src"
-  ]
+, "craco.config.js"  ]
 }
