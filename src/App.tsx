@@ -10,14 +10,18 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { Github, Linkedin, Moon, Sun } from "lucide-react";
+import * as Values from "@utils/homepage-values";
 import Header from "@components/Header";
-
-
+import Projects from "@components/Projects";
+import Footer from "@components/Footer";
+import Skills from "@components/Skills";
+import Experience from "@components/Experience";
+import Links from "@components/Links";
 
 const App: React.FC = () => {
 
   return (
-      <Box p={4}>
+      <Box p={4} min-height="100vh">
         <Header />
 
         <VStack align="stretch" maxW="800px" mx="auto">
@@ -26,22 +30,11 @@ const App: React.FC = () => {
             <Heading as="h1" size="2xl">
               Harrison Surma
             </Heading>
-            <Text fontSize="lg">Computer Science Student | Aspiring Developer</Text>
+            <Text fontSize="lg">Computer Science Student | Developer</Text>
           </Box>
 
           {/* Links */}
-          <HStack justify="center">
-            <Link href="https://github.com/PhantomOffKanagawa">
-              <Button colorScheme="gray" variant="outline">
-              <Github /> GitHub
-              </Button>
-            </Link>
-            <Link href="https://www.linkedin.com/in/harrison-surma/">
-              <Button colorScheme="blue" variant="outline">
-              <Linkedin /> LinkedIn
-              </Button>
-            </Link>
-          </HStack>
+          <Links links={Values.links} />
 
           {/* About Section */}
           <Box as="section">
@@ -49,57 +42,29 @@ const App: React.FC = () => {
               About Me
             </Heading>
             <Text mt={2}>
-              I am a Computer Science student at the University of Missouri with a minor in
-              Psychology and a passion for software development, robotics, and problem-solving.
+              I am a Computer Science student, soon to be graduate, at the University of Missouri with a minor in
+              Psychology and Mathematics, and a passion for software development, robotics, and problem-solving.
+            </Text>
+            <Text mt={2}>
+              I am a self-motivated and goal-oriented worker who believes in working to solve real problems and
+              learning new things along the way. Breaking down problems, working with others to find solutions, and
+              learning from the process are the elements of development that I'll never get tired of.
             </Text>
           </Box>
 
           {/* Skills Section */}
-          <Box as="section">
-            <Heading as="h2" size="lg">
-              Skills
-            </Heading>
-            <Text mt={2}>
-              JavaScript, C, Python, HTML, CSS, Java, Node.js, SQL, Assembly, Project Organization,
-              Communication
-            </Text>
-          </Box>
+          <VStack as="section" gap={2} my={4} align={"start"}>
+            <Heading as="h2" mb={4}>Skills</Heading>
+
+            <Skills skills={Values.languages} />
+            <Skills skills={Values.skills} />
+          </VStack>
 
           {/* Projects Section */}
-          <Box as="section">
-            <Heading as="h2" size="lg">
-              Projects
-            </Heading>
-            <VStack align="stretch">
-              <Box>
-                <Heading as="h3" size="md">
-                  Halloween Laser Tag
-                </Heading>
-                <Text mt={1}>
-                  Created a hardware-software system to register laser hits and interact with IoT
-                  devices via API.
-                </Text>
-              </Box>
-              <Box>
-                <Heading as="h3" size="md">
-                  Personal Web Apps
-                </Heading>
-                <Text mt={1}>
-                  Developed Shuttle Timing, Availability Planning, and Meal Plan Generation apps to
-                  solve everyday problems.
-                </Text>
-              </Box>
-              <Box>
-                <Heading as="h3" size="md">
-                  Disney FastPass Replica Ornament
-                </Heading>
-                <Text mt={1}>
-                  Designed an Arduino-based NFC reading ornament with RGB lighting and a custom 3D
-                  printed harness.
-                </Text>
-              </Box>
-            </VStack>
-          </Box>
+          <Projects projects={Values.projects} />
+
+          {/* Experience Section */}
+          <Experience experiences={Values.experiences}/>
 
           {/* Contact Section */}
           <Box as="section">
@@ -115,9 +80,7 @@ const App: React.FC = () => {
           </Box>
 
           {/* Footer */}
-          <Box as="footer" textAlign="center" mt={8}>
-            <Text>&copy; {new Date().getFullYear()} Harrison Surma. All rights reserved.</Text>
-          </Box>
+          <Footer />
         </VStack>
       </Box>
   );

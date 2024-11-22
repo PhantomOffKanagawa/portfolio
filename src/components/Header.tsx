@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Flex, Heading, Button, } from "@chakra-ui/react";
+import { Box, Flex, Heading, Button, Link } from "@chakra-ui/react";
 import { useTheme } from '../contexts/ThemeContext';
 
 interface HeaderProps {
 }
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = () => {
     const { appearance, setAppearance } = useTheme();
   
     const toggleTheme = () => {
@@ -16,7 +16,9 @@ const Header: React.FC = () => {
       <Box as="header" px={4}>
         <Flex h={16} alignItems="center" justifyContent="space-between">
           <Heading as="h1" size="lg">
-            Harrison Surma
+            <Link href="/portfolio">
+              Portfolio
+            </Link>
           </Heading>
           <Button onClick={toggleTheme}>
             {appearance === "dark" ? "Light Mode" : "Dark Mode"}
