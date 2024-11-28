@@ -48,7 +48,7 @@ const projects: Project[] = [
     icon: <Siren size="75%" />,
   },
   {
-    key: "lean-green",
+  key: "lean-green",
     title: "Tiger Hacks 'Lean Green' Recipe Site",
     description:
       "Web app & Extension for sharing and rating recipes based on carbon footprint.",
@@ -89,7 +89,7 @@ const experiences = [
     role: "Host",
     company: "Red Robin",
     description: "Provided excellent customer service and managed to-go orders.",
-    duration: "May 2021 - August 2021",
+    duration: "2021",
   },
   {
     role: "Community Volunteer",
@@ -112,7 +112,7 @@ const links = [
   },
   {
     text: "Resume",
-    href: "/portfolio/Harrison-Surma-Resume.pdf",
+    href: "/Harrison-Surma-Resume.pdf",
     icon: <FileDownIcon />,
   }
 ]

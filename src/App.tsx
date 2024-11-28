@@ -72,7 +72,7 @@ const App: React.FC = () => {
               Contact
             </Heading>
             <Text mt={2}>
-              Feel free to reach out at{" "}
+              Reach out to{" "}
               <Link href="mailto:harry@surmafamily.com" color="teal.500">
                 harry@surmafamily.com
               </Link>

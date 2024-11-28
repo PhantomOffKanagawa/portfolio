@@ -21,7 +21,7 @@ function Resume() {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/portfolio/Harrison-Surma-Resume.pdf';
+    link.href = '/Harrison-Surma-Resume.pdf';
     link.download = 'Harrison-Surma-Resume.pdf';
     link.click();
   };
@@ -39,7 +39,7 @@ function Resume() {
         Download Resume
       </Button>
       <Document
-        file="/portfolio/Harrison-Surma-Resume.pdf"
+        file="/Harrison-Surma-Resume.pdf"
         onLoadError={console.error}
         onSourceError={console.error}
       >

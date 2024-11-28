@@ -7,17 +7,19 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => (
   <Box my={2}>
-    <Heading as="h2" size="xl" mb={4}>
+    <Heading as="h2" size={["lg", "xl"]} mb={4}>
       Projects
     </Heading>
-    <SimpleGrid columns={[1, 2, 3]} gap={10} height="750px">
+    <SimpleGrid columns={[1, 2, 3]} gap={[4, 6, 10]} minHeight={["auto", "750px"]}>
       {projects.map((project) => (
         <Box
           key={project.title}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
-          height="100%"
+          height={["auto", "100%"]}
+          display="flex"
+          flexDirection="column"
         >
           {project.image ? (
             <Image
@@ -26,6 +28,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => (
               width="100%"
               aspectRatio={"5/3"}
               fit="cover"
+              flexShrink={1}
             />
           ) : 
             <Box 
@@ -35,32 +38,38 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => (
               alignItems="center" 
               justifyContent="center"
               bg="colorPalette.200/40"
+              flexShrink={1}
             >
               {project.icon}
             </Box>
-            }
-          <Box p={6} display="flex" flexDirection="column" height="100%">
-            <Link color="MenuText" href={`/portfolio/project/${project.key}`} minHeight="3rem">
-              <Heading as="h3" size="md" mb={2} lineClamp={2}>
-                {project.title}
-              </Heading>
-            </Link>
-            <Text mb={3} lineClamp={3}>
+          }
+            <Box p={[2, 4]} flex-grow={1} display="flex" flexDirection="column" height="100%">
+            <Heading as="h3" size={["sm", "md"]} mb={2} lineClamp={2}>
+              {project.title}
+            </Heading>
+            <Text mb={3} lineClamp={3} fontSize={["sm", "md"]}>
               {project.description}
             </Text>
-            <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Box 
+              display="flex" 
+              justifyContent="space-between" 
+              alignItems="center"
+              flexWrap="wrap"
+              gap={0}
+              mt="auto"
+            >
               {project.link && (
-              <Link href={project.link} color="colorPalette.500">
+              <Link href={project.link} color="colorPalette.500" fontSize={["sm", "md"]}>
                 View Demo
               </Link>
               )}
               {project.repo && (
-              <Link href={project.repo} color="colorPalette.500">
+              <Link href={project.repo} color="colorPalette.500" fontSize={["sm", "md"]}>
                 View Repo
               </Link>
               )}
             </Box>
-          </Box>
+            </Box>
         </Box>
       ))}
     </SimpleGrid>

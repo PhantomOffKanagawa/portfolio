@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = () => {
       <Box as="header" px={4}>
         <Flex h={16} alignItems="center" justifyContent="space-between">
           <Heading as="h1" size="lg">
-            <Link href="/portfolio">
+            <Link href="/">
               Portfolio
             </Link>
           </Heading>

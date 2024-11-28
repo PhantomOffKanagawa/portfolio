@@ -17,9 +17,9 @@ const root = ReactDOM.createRoot(
 const RoutedPage = () => {
   return (
     <Routes>
-      <Route path="/portfolio" element={<App />} />
-      <Route path="/portfolio/project/:projectName" element={<Project />} />
-      {/* <Route path="/portfolio/resume" element={<Resume />} /> */}
+      <Route path="/" element={<App />} />
+      <Route path="/project/:projectName" element={<Project />} />
+      {/* <Route path="/resume" element={<Resume />} /> */}
     </Routes>
   );
 }
