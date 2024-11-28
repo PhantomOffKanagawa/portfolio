@@ -52,7 +52,7 @@ const projects: Project[] = [
     title: "Tiger Hacks 'Lean Green' Recipe Site",
     description:
       "Web app & Extension for sharing and rating recipes based on carbon footprint.",
-    link: "https://leangreen.com/",
+    // link: "https://leangreen.com/",
     repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
     icon: <ForkKnife size="75%" />,
   },
