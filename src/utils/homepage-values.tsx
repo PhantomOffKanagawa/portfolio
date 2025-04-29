@@ -8,6 +8,7 @@ export type Project = {
     repo?: string;
     icon: JSX.Element;
     image?: string;
+    featured?: boolean;
   };
 
 const languages = ["JavaScript", "Typescript", "React", "Node.js", "C", "Python", "SQL", "HTML", "CSS"];
@@ -22,6 +23,7 @@ const projects: Project[] = [
       "Hardware and software system for registering laser hits with IoT APIs.",
     repo: "https://github.com/PhantomOffKanagawa/Home-Hosted-Laser-Arcade",
     icon: <Gamepad size="75%" />,
+    featured: true,
   },
   {
     key: "shuttle-time",
@@ -31,6 +33,7 @@ const projects: Project[] = [
     link: "https://phantomoffkanagawa.github.io/ShuttleTimeCalc/",
     repo: "https://github.com/PhantomOffKanagawa/ShuttleTimeCalc",
     icon: <BusFront size="75%" />,
+    featured: true,
   },
   {
     key: "availability-planner",
@@ -40,12 +43,14 @@ const projects: Project[] = [
     link: "https://phantomoffkanagawa.github.io/AvailabilityPlanner/",
     repo: "https://github.com/PhantomOffKanagawa/AvailabilityPlanner",
     icon: <Calendar size="75%" />,
+    featured: true,
   },
   {
     key: "fastpass",
     title: "Disney FastPass Ornament",
     description: "Arduino-powered NFC reader with animated RGB ring light.",
     icon: <Siren size="75%" />,
+    featured: true,
   },
   {
   key: "lean-green",
@@ -55,6 +60,7 @@ const projects: Project[] = [
     // link: "https://leangreen.com/",
     repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
     icon: <ForkKnife size="75%" />,
+    featured: true,
   },
   {
     key: "portfolio",
@@ -63,6 +69,7 @@ const projects: Project[] = [
     link: "https://phantomoffkanagawa.github.io/portfolio/",
     repo: "https://github.com/PhantomOffKanagawa/portfolio",
     icon: <Home size="75%" />,
+    featured: true,
   }
 ];
 

@@ -9,6 +9,7 @@ import { ChakraProvider, defaultSystem, Theme } from "@chakra-ui/react";
 import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import AllProjects from "pages/AllProjects";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -19,6 +20,7 @@ const RoutedPage = () => {
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/project/:projectName" element={<Project />} />
+      <Route path="/projects" element={<AllProjects />} />
       {/* <Route path="/resume" element={<Resume />} /> */}
     </Routes>
   );

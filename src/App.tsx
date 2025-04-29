@@ -19,7 +19,8 @@ import Experience from "@components/Experience";
 import Links from "@components/Links";
 
 const App: React.FC = () => {
-
+  const featuredProjects = Values.projects.filter(p => p.featured); // Filter featured projects
+  
   return (
       <Box p={4} min-height="100vh">
         <Header />
@@ -61,7 +62,7 @@ const App: React.FC = () => {
           </VStack>
 
           {/* Projects Section */}
-          <Projects projects={Values.projects} />
+          <Projects projects={featuredProjects} showAllLink={false} />
 
           {/* Experience Section */}
           <Experience experiences={Values.experiences}/>
