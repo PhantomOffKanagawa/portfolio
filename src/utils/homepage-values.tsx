@@ -1,4 +1,4 @@
-import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home } from "lucide-react";
+import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2 } from "lucide-react";
 
 export type Project = {
     key: string;
@@ -17,12 +17,22 @@ const skills = ["Project Management", "Git", "Organization Skills", "Problem Sol
 
 const projects: Project[] = [
   {
-    key: "laser-tag",
-    title: "Halloween Laser Tag",
+    key: "MealGen",
+    title: "MealGen",
     description:
-      "Hardware and software system for registering laser hits with IoT APIs.",
-    repo: "https://github.com/PhantomOffKanagawa/Home-Hosted-Laser-Arcade",
-    icon: <Gamepad size="75%" />,
+      "MERN + GraphQL fullstack meal planner with a easy drag and drop interface.",
+    repo: "https://github.com/PhantomOffKanagawa/MealGen",
+    icon: <ForkKnife size="75%" />,
+    featured: true,
+  },
+  {
+    key: "canvas-cli",
+    title: "Canvas CLI",
+    description:
+      "Terminal app for a git-like experience submitting assignments to Canvas LMS.",
+    repo: "https://github.com/PhantomOffKanagawa/canvas-cli",
+    link: "https://pypi.org/project/canvas-cmd/", 
+    icon: <School2 size="75%" />,
     featured: true,
   },
   {
@@ -36,6 +46,16 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    key: "resume-generator",
+    title: "Resume Generator",
+    description:
+      "Resume generator that automatically generates and distributes my resume.",
+    repo: "https://github.com/PhantomOffKanagawa/resume-generator",
+    link: "https://phantomoffkanagawa.github.io/resume-generator/",
+    icon: <FileDownIcon size="75%" />,
+    featured: true,
+  },
+  {
     key: "availability-planner",
     title: "Availability Planner",
     description:
@@ -46,11 +66,27 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    key: "portfolio",
+    title: "Portfolio Website",
+    description: "Personal portfolio website to showcase my projects and experiences.",
+    link: "https://phantomoffkanagawa.github.io/portfolio/",
+    repo: "https://github.com/PhantomOffKanagawa/portfolio",
+    icon: <Home size="75%" />,
+    featured: true,
+  },
+  {
     key: "fastpass",
     title: "Disney FastPass Ornament",
     description: "Arduino-powered NFC reader with animated RGB ring light.",
     icon: <Siren size="75%" />,
-    featured: true,
+  },
+  {
+    key: "laser-tag",
+    title: "Halloween Laser Tag",
+    description:
+      "Hardware and software system for registering laser hits with IoT APIs.",
+    repo: "https://github.com/PhantomOffKanagawa/Home-Hosted-Laser-Arcade",
+    icon: <Gamepad size="75%" />,
   },
   {
   key: "lean-green",
@@ -60,16 +96,6 @@ const projects: Project[] = [
     // link: "https://leangreen.com/",
     repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
     icon: <ForkKnife size="75%" />,
-    featured: true,
-  },
-  {
-    key: "portfolio",
-    title: "Portfolio Website",
-    description: "Personal portfolio website to showcase my projects and experiences.",
-    link: "https://phantomoffkanagawa.github.io/portfolio/",
-    repo: "https://github.com/PhantomOffKanagawa/portfolio",
-    icon: <Home size="75%" />,
-    featured: true,
   }
 ];
 
@@ -78,7 +104,7 @@ const experiences = [
     role: "Software Lead",
     company: "SURF Underwater Robotics",
     description: "Led software group and worked on motor communication/image processing.",
-    duration: "2023 - 2024",
+    duration: "2023 - 2025",
   },
   {
     role: "Lead Volunteer",

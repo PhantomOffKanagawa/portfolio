@@ -10,10 +10,10 @@ interface ProjectsProps {
 const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => (
     <SimpleGrid columns={[1, 2, 3]} gap={[4, 6, 10]} minHeight={["auto", "750px"]}>
       {projects.map((project) => (
-        <RouterLink
-          key={project.key}
-          to={`/project/${project.key}`}
-          >
+        // <RouterLink
+        //   key={project.key}
+        //   to={`/project/${project.key}`}
+        //   >
         <Box
           key={project.title}
           borderWidth="1px"
@@ -47,7 +47,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => (
             </Box>
           }
             <Box p={[2, 4]} flex-grow={1} display="flex" flexDirection="column" height="100%">
-            <Heading as="h3" size={["sm", "md"]} mb={2} lineClamp={2} textDecoration="underline">
+            <Heading as="h3" size={["sm", "md"]} mb={2} lineClamp={2}>
               {project.title}
             </Heading>
             <Text mb={3} lineClamp={3} fontSize={["sm", "md"]}>
@@ -75,7 +75,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => (
             </Box>
             </Box>
         </Box>
-        </RouterLink>
+        // </RouterLink>
       ))}
     </SimpleGrid>
 );

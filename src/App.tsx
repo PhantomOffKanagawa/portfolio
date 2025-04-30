@@ -1,15 +1,11 @@
 import React from "react";
 import {
-  ChakraProvider,
   Box,
   VStack,
   Heading,
   Text,
-  HStack,
-  Button,
   Link,
 } from "@chakra-ui/react";
-import { Github, Linkedin, Moon, Sun } from "lucide-react";
 import * as Values from "@utils/homepage-values";
 import Header from "@components/Header";
 import Projects from "@components/Projects";
@@ -62,7 +58,7 @@ const App: React.FC = () => {
           </VStack>
 
           {/* Projects Section */}
-          <Projects projects={featuredProjects} showAllLink={false} />
+          <Projects projects={featuredProjects} showAllLink={true} />
 
           {/* Experience Section */}
           <Experience experiences={Values.experiences}/>
