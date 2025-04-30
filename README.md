@@ -1,72 +1,114 @@
-# Harrison Surma Portfolio
+# 🎉 Harrison Surma Portfolio
 
-So far, just a basic thrown together react template to be hosted as my portfolio displaying my projects
+[![Status](https://img.shields.io/badge/Status-Active-green?style=for-the-badge&logo=github)](https://github.com/PhantomOffKanagawa/portfolio)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://phantomoffkanagawa.github.io/portfolio/)
+[![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub%20Actions-blue?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/PhantomOffKanagawa/portfolio/actions)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/PhantomOffKanagawa/portfolio/actions)
+[![Chakra UI](https://img.shields.io/badge/Chakra%20UI-brightgreen?style=for-the-badge&logo=chakraui&logoColor=white)](https://chakra-ui.com/docs/getting-started)
+[![Node.js](https://img.shields.io/badge/Node.js-brightgreen?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/download/)
+[![React](https://img.shields.io/badge/React-blue?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/docs/getting-started.html)
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+> **A modern, responsive portfolio website built with React and TypeScript**
 
-In the project directory, you can run:
+A personal portfolio website showcasing my skills, projects, and experience as a software developer and Computer Science student, featuring a clean interface with light/dark mode and responsive design.
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📄 **Configuration Based** - Everything is generated from variable values making updates effortless
+- 🎯 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- 🚀 **Light/Dark Mode** - Toggle between light and dark themes
+- 🎬 **Automatic Deployment** - Github Actions handle double checking pull requests and deployment
+- 🔧 **Project Showcase** - Display featured projects with links to live demos and repositories
+- 💡 **Contact Information** - Easy ways to get in touch
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚨 Important Information
 
-### `npm test`
+This portfolio is continuously being updated with new projects and improvements. The site is built with React and TypeScript using the Chakra UI component library for a clean, modern interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Installation
 
-### `npm run build`
+```bash
+# Clone this repository
+git clone https://github.com/PhantomOffKanagawa/portfolio.git
+cd portfolio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Configuration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project uses `craco` (Create React App Configuration Override) to customize the webpack configuration without ejecting. The configuration is defined in `craco.config.js` \\
 
-### `npm run eject`
+Information for the project is stored in `src/utils/homepage-values.ts` and can be modified to suit your needs. Everything is built to be fast and easy to update.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📝 Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🚀 Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the portfolio in development mode:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will start the development server at [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ⚡ Building and Deployment
 
-### Code Splitting
+The portfolio is set up to be deployed to GitHub Pages using GitHub Actions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Build the site locally
+npm run build
 
-### Analyzing the Bundle Size
+# Deploy to GitHub Pages manually (if needed)
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The site is automatically deployed through GitHub Actions when changes are pushed to the main branch. The workflow is defined in `.github/workflows/deploy.yml`.
 
-### Making a Progressive Web App
+## 🚑 Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Build issues**: If you encounter build issues, make sure you have the correct version of Node.js installed.
+- **Missing dependencies**: Run `npm install` to ensure all dependencies are properly installed.
+- **Path aliases not working**: Check both the `craco.config.js` and `tsconfig.json` files to ensure path aliases are configured correctly.
 
-### Advanced Configuration
+## 📊 Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Node.js >= 20.x
+- npm >= 11.x
+- TypeScript >= 4.9
+- Dependencies:
+  - React 18
+  - Chakra UI 3.2
+  - React Router DOM 6.28
+  - Framer Motion
+  - Lucide React (for icons)
 
-### Deployment
+## 📱 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+portfolio/
+├── public/              # Static files
+├── src/                 # Source code
+│   ├── components/      # UI components
+│   │   └── ui/          # Base UI components
+│   ├── contexts/        # React contexts
+│   ├── pages/           # Page components
+│   └── utils/           # Utility functions
+├── .github/workflows/   # GitHub Actions CI/CD
+├── craco.config.js      # Webpack configuration
+└── tsconfig.json        # TypeScript configuration
+```
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Feel free to submit pull requests or open issues to improve the project.
+
+---
+
+Made with ❤️ by Harrison Surma
