@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Resume from "./pages/Resume";
 import Project from "./pages/Project";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, defaultSystem, Theme } from "@chakra-ui/react";

@@ -4,7 +4,6 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { ProjectsGrid } from '@components/Projects'; // Import the grid component
 import { projects as allProjects } from '@utils/homepage-values'; // Import all projects
-import { useTheme } from '@contexts/ThemeContext';
 
 const AllProjects: React.FC = () => {
 

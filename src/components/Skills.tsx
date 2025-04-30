@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, HStack, Flex } from "@chakra-ui/react";
+import { HStack, Flex } from "@chakra-ui/react";
 import { Tag } from "@components/ui/tag";
 
 interface SkillsProps {

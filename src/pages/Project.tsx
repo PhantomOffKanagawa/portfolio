@@ -3,7 +3,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { projects } from '@utils/homepage-values';
-import { ExternalLink, Router } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import React from "react";
 
 function Project() {
