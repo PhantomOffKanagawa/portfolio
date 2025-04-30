@@ -1,4 +1,4 @@
-import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2 } from "lucide-react";
+import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2, University, School, BriefcaseBusiness, HelpingHand } from "lucide-react";
 
 export type Project = {
     key: string;
@@ -10,6 +10,11 @@ export type Project = {
     image?: string;
     featured?: boolean;
   };
+
+const aboutMe = [
+  "I am a Computer Science student, soon to be graduate, at the University of Missouri with a minor in Psychology and Mathematics, and a passion for software development, robotics, and problem-solving.",
+  "I am a self-motivated and goal-oriented worker who believes in working to solve real problems and learning new things along the way. Breaking down problems, working with others to find solutions, and learning from the process are the elements of development that I'll never get tired of.",
+  ]
 
 const languages = ["JavaScript", "Typescript", "React", "Node.js", "C", "Python", "SQL", "HTML", "CSS"];
 
@@ -105,30 +110,35 @@ const experiences = [
     company: "SURF Underwater Robotics",
     description: "Led software group and worked on motor communication/image processing.",
     duration: "2023 - 2025",
+    icon: <University />,
   },
   {
     role: "Lead Volunteer",
     company: "DNA Night - DuPage County, IL",
     description: "Led logistics for lab setup/cleanup and managed event standards compliance for local schools.",
     duration: "2014 - 2018",
+    icon: <School />,
   },
   {
     role: "Presenter",
     company: "STEM Night - DuPage County, IL",
     description: "Managed 3D printing demonstration booth and supported event operations for elementary schools.",
     duration: "2017 - 2018",
+    icon: <School />,
   },
   {
     role: "Host",
     company: "Red Robin",
     description: "Provided excellent customer service and managed to-go orders.",
     duration: "2021",
+    icon: <BriefcaseBusiness />,
   },
   {
     role: "Community Volunteer",
     company: "Miseracordia - Chicagoland Area, IL",
     description: "Supported fundraising events and community outreach for developmental disabilities awareness.",
     duration: "2010 - 2016",
+    icon: <HelpingHand />,
   },
 ];
 
@@ -150,4 +160,29 @@ const links = [
   }
 ]
 
-export { languages, skills, projects, experiences, links };
+const education = {
+  university: "University of Missouri",
+  location: "Columbia, Missouri",
+  degree: "Bachelor of Science in Computer Science",
+  graduation: "May 2025",
+  gpa: "3.85/4.00",
+  distinctions: ["Magna Cum Laude"],
+  minors: ["Psychology", "Mathematics"],
+  certifications: ["Web and Mobile Applications Development Certificate"],
+  duration: "August 2021 - May 2025",
+};
+
+const honors = [
+  {
+    title: "Mizzou Honors College",
+    duration: "August 2021 - Present",
+    description: "A selective society that requires a maintained cumulative 3.5 GPA and allows enrollment in classes with higher rigor and unique content such as Behavioral Science and Writing & Rhetoric"
+  },
+  {
+    title: "Mizzou High Dean's List",
+    duration: "Fall 2021 - Present",
+    description: "Awarded to students with a minimum of a 3.5 GPA. Awarded each semester since Fall 2021."
+  }
+];
+
+export { aboutMe, languages, skills, projects, experiences, links, education, honors };

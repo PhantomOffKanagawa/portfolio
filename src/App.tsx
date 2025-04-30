@@ -12,6 +12,7 @@ import Projects from "@components/Projects";
 import Footer from "@components/Footer";
 import Skills from "@components/Skills";
 import Experience from "@components/Experience";
+import Education from "@components/Education";
 import Links from "@components/Links";
 
 const App: React.FC = () => {
@@ -39,15 +40,16 @@ const App: React.FC = () => {
               About Me
             </Heading>
             <Text mt={2}>
-              I am a Computer Science student, soon to be graduate, at the University of Missouri with a minor in
-              Psychology and Mathematics, and a passion for software development, robotics, and problem-solving.
-            </Text>
-            <Text mt={2}>
-              I am a self-motivated and goal-oriented worker who believes in working to solve real problems and
-              learning new things along the way. Breaking down problems, working with others to find solutions, and
-              learning from the process are the elements of development that I'll never get tired of.
+              {Values.aboutMe.map((line, index) => (
+                <Text key={index} mb={2}>
+                  {line}
+                </Text>
+              ))}
             </Text>
           </Box>
+
+          {/* Education Section */}
+          <Education education={Values.education} honors={Values.honors} />
 
           {/* Skills Section */}
           <VStack as="section" gap={2} my={4} align={"start"}>
