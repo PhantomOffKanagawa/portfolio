@@ -10,10 +10,15 @@ interface LinkProps {
 }
 
 const Links: React.FC<LinkProps> = ({ links }) => (
-    <HStack justify="center">
+    <HStack justify="center" flexWrap="wrap" gap={4}>
       {links.map((exp) => (
-        <Link key={exp.text + "-link"} href={exp.href} target="_blank">
-            <Button colorScheme="gray" variant="outline">
+      <Link
+        key={exp.text + "-link"}
+        href={exp.href}
+        target="_blank"
+        flexBasis={["100%", "20%"]}
+      >
+            <Button colorScheme="gray" variant="outline" width="100%">
                 {exp.icon} {exp.text}
             </Button>
         </Link>
