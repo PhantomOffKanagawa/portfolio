@@ -10,13 +10,10 @@ import FloatingGithubLink from '@components/ui/floating-icon';
 const CategoryProjects: React.FC = () => {
   const { categoryName } = useParams<{ categoryName: string }>();
 
-  // Convert category name back to actual name
-  // e.g., "web-development" from url to "Web Development"
+  // // Convert category name back to actual name
+  // // e.g., "web-development" from url to "Web Development"
   const formattedCategoryName = categoryName
-    ? categoryName
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ')
+    ? decodeURI(categoryName)
     : '';
 
   // Filter projects by the category
