@@ -1,9 +1,8 @@
 import { Box, Flex, HStack, Text } from "@chakra-ui/react";
 
-export const Card: React.FC<{ key: string; title: string; subtitle: string; description: string; icon: React.ReactNode }> = ({ key, title, subtitle, description, icon }) => {
+export const Card: React.FC<{ title: string; subtitle: string; description: string; icon: React.ReactNode }> = ({ title, subtitle, description, icon }) => {
     return (
           <Box 
-            key={key}
             p={4}
             borderWidth="1px"
             borderRadius="md"

@@ -39,13 +39,11 @@ const App: React.FC = () => {
             <Heading as="h2" size="lg">
               About Me
             </Heading>
-            <Text mt={2}>
-              {Values.aboutMe.map((line, index) => (
-                <Text key={index} mb={2}>
-                  {line}
-                </Text>
-              ))}
-            </Text>
+            {Values.aboutMe.map((line, index) => (
+              <Text key={index} mt={2} mb={2}>
+                {line}
+              </Text>
+            ))}
           </Box>
 
           {/* Education Section */}

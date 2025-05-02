@@ -12,7 +12,7 @@ interface LinkProps {
 const Links: React.FC<LinkProps> = ({ links }) => (
     <HStack justify="center">
       {links.map((exp) => (
-        <Link href={exp.href} target="_blank">
+        <Link key={exp.text + "-link"} href={exp.href} target="_blank">
             <Button colorScheme="gray" variant="outline">
                 {exp.icon} {exp.text}
             </Button>
