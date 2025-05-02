@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, defaultSystem, Theme } from "@chakra-ui/react";
 import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
 
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import AllProjects from "pages/AllProjects";
 import CategoryProjects from "pages/CategoryProjects";
 import NotFound from "pages/NotFound";
@@ -44,9 +44,9 @@ const AppWrapper = () => {
   return (
     <ChakraProvider value={defaultSystem}>
       <ThemeProvider>
-        <BrowserRouter>
+        <HashRouter>
           <ThemedApp />
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </ChakraProvider>
   );
