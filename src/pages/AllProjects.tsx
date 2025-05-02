@@ -47,9 +47,7 @@ const AllProjects: React.FC = () => {
                 {allCategories.map((category) => (
                   <RouterLink
                     key={category}
-                    to={`/category/${category
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
+                    to={`/category/${category}`}
                   >
                     <Tag colorScheme="teal" size="md" borderRadius="full">
                       {category}

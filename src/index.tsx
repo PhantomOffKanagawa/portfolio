@@ -10,6 +10,7 @@ import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AllProjects from "pages/AllProjects";
 import CategoryProjects from "pages/CategoryProjects";
+import NotFound from "pages/NotFound";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,6 +24,8 @@ const RoutedPage = () => {
       <Route path="/projects" element={<AllProjects />} />
       <Route path="/category/:categoryName" element={<CategoryProjects />} />
       {/* <Route path="/resume" element={<Resume />} /> */}
+      
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
