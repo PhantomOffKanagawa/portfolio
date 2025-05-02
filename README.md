@@ -105,6 +105,11 @@ portfolio/
 └── tsconfig.json        # TypeScript configuration
 ```
 
+## 📜 Next Steps
+- Add functionality for Skills which are also categories to take you to that category of projects
+- Refactor to Next.js with more interesting format
+- Localize data for resume and projects for easier updates
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit pull requests or open issues to improve the project.

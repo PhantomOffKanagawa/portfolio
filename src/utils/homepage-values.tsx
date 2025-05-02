@@ -9,7 +9,11 @@ export type Project = {
     icon: JSX.Element;
     image?: string;
     featured?: boolean;
+    categories?: string[];
   };
+
+const githubUrl = "https://github.com/PhantomOffKanagawa/portfolio";
+const githubProfileUrl = "https://github.com/PhantomOffKanagawa/portfolio";
 
 const aboutMe = [
   "I am a Computer Science student, soon to be graduate, at the University of Missouri with a minor in Psychology and Mathematics, and a passion for software development, robotics, and problem-solving.",
@@ -29,6 +33,7 @@ const projects: Project[] = [
     repo: "https://github.com/PhantomOffKanagawa/MealGen",
     icon: <ForkKnife size="75%" />,
     featured: true,
+    categories: ["Web App"],
   },
   {
     key: "canvas-cli",
@@ -49,6 +54,7 @@ const projects: Project[] = [
     repo: "https://github.com/PhantomOffKanagawa/ShuttleTimeCalc",
     icon: <BusFront size="75%" />,
     featured: true,
+    categories: ["Web App"],
   },
   {
     key: "resume-generator",
@@ -69,6 +75,7 @@ const projects: Project[] = [
     repo: "https://github.com/PhantomOffKanagawa/AvailabilityPlanner",
     icon: <Calendar size="75%" />,
     featured: true,
+    categories: ["Web App"],
   },
   {
     key: "portfolio",
@@ -78,6 +85,7 @@ const projects: Project[] = [
     repo: "https://github.com/PhantomOffKanagawa/portfolio",
     icon: <Home size="75%" />,
     featured: true,
+    categories: ["Web App"],
   },
   {
     key: "fastpass",
@@ -101,6 +109,7 @@ const projects: Project[] = [
     // link: "https://leangreen.com/",
     repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
     icon: <ForkKnife size="75%" />,
+    categories: ["Web App"],
   }
 ];
 
@@ -185,4 +194,4 @@ const honors = [
   }
 ];
 
-export { aboutMe, languages, skills, projects, experiences, links, education, honors };
+export { githubUrl, githubProfileUrl, aboutMe, languages, skills, projects, experiences, links, education, honors };

@@ -65,23 +65,63 @@ const Education: React.FC<EducationProps> = ({ education, honors }) => {
         <Text fontWeight="medium">
           {education.degree}
         </Text>
-        
-        <Flex justify="space-between" align={["flex-start", "center"]} direction={["column", "row"]} mb={2}>
-        <HStack mt={1} gap={2} wrap="wrap">
+
+      <Flex justify="space-between" align={["flex-start", "center"]} direction={["column", "row"]} mb={2} flexWrap="wrap" gap={2}>
+        <HStack mt={1} gap={2} wrap="wrap" maxW="100%">
           {education.minors.length > 0 && (
             <Text fontSize="sm">
               Minor in {education.minors.join(" and ")}
             </Text>
           )}
         </HStack>
-        <HStack mt={1} gap={2} wrap="wrap">
+        <HStack mt={1} gap={2} flexWrap="wrap" maxW={["100%", "60%"]} justify={["flex-start", "flex-end"]}>
           {education.certifications.map((cert, index) => (
-            <Badge key={index} colorScheme="teal" variant="subtle">
+            <Badge key={index} colorScheme="teal" variant="subtle" whiteSpace="normal" wordBreak="break-word" maxW="100%" px={2} py={1} fontSize="sm">
               {cert}
             </Badge>
           ))}
         </HStack>
-        </Flex>
+      </Flex>
+        
+        {/* <Flex
+          justify="space-between"
+          align={["flex-start", "center"]}
+          direction={["column", "row"]}
+          mb={2}
+          flexWrap="wrap"
+          gap={2}
+        >
+          <HStack mt={1} gap={2} flexWrap="wrap" maxW="100%">
+            {education.minors.length > 0 && (
+              <Text fontSize="sm" whiteSpace="normal">
+          Minor in {education.minors.join(" and ")}
+              </Text>
+            )}
+          </HStack>
+          <HStack
+            mt={1}
+            gap={2}
+            flexWrap="wrap"
+            maxW={["100%", "60%"]}
+            justify={["flex-start", "flex-end"]}
+          >
+            {education.certifications.map((cert, index) => (
+              <Badge
+          key={index}
+          colorScheme="teal"
+          variant="subtle"
+          whiteSpace="normal"
+          wordBreak="break-word"
+          maxW="100%"
+          px={2}
+          py={1}
+          fontSize="sm"
+              >
+          {cert}
+              </Badge>
+            ))}
+          </HStack>
+        </Flex> */}
 
         <Box as="hr" my={3} borderColor="gray.200" borderWidth="1px" />
         <SimpleGrid columns={[1, 2]} gap={2}>

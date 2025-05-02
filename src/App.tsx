@@ -14,6 +14,7 @@ import Skills from "@components/Skills";
 import Experience from "@components/Experience";
 import Education from "@components/Education";
 import Links from "@components/Links";
+import FloatingGithubLink from "@components/ui/floating-icon";
 
 const App: React.FC = () => {
   const featuredProjects = Values.projects.filter(p => p.featured); // Filter featured projects
@@ -39,13 +40,11 @@ const App: React.FC = () => {
             <Heading as="h2" size="lg">
               About Me
             </Heading>
-            <Text mt={2}>
-              {Values.aboutMe.map((line, index) => (
-                <Text key={index} mb={2}>
-                  {line}
-                </Text>
-              ))}
-            </Text>
+            {Values.aboutMe.map((line, index) => (
+              <Text key={index} mt={2} mb={2}>
+                {line}
+              </Text>
+            ))}
           </Box>
 
           {/* Education Section */}
@@ -81,6 +80,9 @@ const App: React.FC = () => {
           {/* Footer */}
           <Footer />
         </VStack>
+
+        {/* Floating GitHub Link */}
+        <FloatingGithubLink />
       </Box>
   );
 };
