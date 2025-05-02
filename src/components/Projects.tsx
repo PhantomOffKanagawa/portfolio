@@ -81,9 +81,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => (
               {project.categories.map((category) => (
                 <RouterLink
                   key={category}
-                  to={`/category/${category
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
+                  to={`/category/${category}`}
                 >
                   <Tag size="sm" colorScheme="teal" borderRadius="full">
                     {category}

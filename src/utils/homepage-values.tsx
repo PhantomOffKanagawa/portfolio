@@ -1,4 +1,4 @@
-import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2, University, School, BriefcaseBusiness, HelpingHand } from "lucide-react";
+import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2, University, School, BriefcaseBusiness, HelpingHand, Shirt, LucideMonitorPlay } from "lucide-react";
 
 export type Project = {
     key: string;
@@ -33,7 +33,7 @@ const projects: Project[] = [
     repo: "https://github.com/PhantomOffKanagawa/MealGen",
     icon: <ForkKnife size="75%" />,
     featured: true,
-    categories: ["Web App"],
+    categories: ["Web App", "React"],
   },
   {
     key: "canvas-cli",
@@ -41,20 +41,21 @@ const projects: Project[] = [
     description:
       "Terminal app for a git-like experience submitting assignments to Canvas LMS.",
     repo: "https://github.com/PhantomOffKanagawa/canvas-cli",
-    link: "https://pypi.org/project/canvas-cmd/", 
+    link: "https://pypi.org/project/canvas-cmd/",
     icon: <School2 size="75%" />,
     featured: true,
+    categories: ["Python", "Github Actions"],
   },
   {
     key: "shuttle-time",
     title: "Shuttle Timing",
     description:
       "Shuttle Timing Calculator to help plan out your day and see when the next shuttle is.",
-    link: "https://phantomoffkanagawa.github.io/ShuttleTimeCalc/",
     repo: "https://github.com/PhantomOffKanagawa/ShuttleTimeCalc",
+    link: "https://phantomoffkanagawa.github.io/ShuttleTimeCalc/",
     icon: <BusFront size="75%" />,
     featured: true,
-    categories: ["Web App"],
+    categories: ["Web App", "HTML"],
   },
   {
     key: "resume-generator",
@@ -65,33 +66,57 @@ const projects: Project[] = [
     link: "https://phantomoffkanagawa.github.io/resume-generator/",
     icon: <FileDownIcon size="75%" />,
     featured: true,
+    categories: ["Python", "Github Actions"],
+  },
+  {
+    key: "portfolio",
+    title: "Portfolio Website",
+    description:
+      "Personal portfolio website to showcase my projects and experiences.",
+    repo: "https://github.com/PhantomOffKanagawa/portfolio",
+    link: "https://phantomoffkanagawa.github.io/portfolio/",
+    icon: <Home size="75%" />,
+    featured: true,
+    categories: ["Web App", "React", "Github Actions"],
+  },
+  {
+    key: "spot-control",
+    title: "Spot Control",
+    description:
+      "Spot Control is a WPF spotify playback controller with a custom UI.",
+    repo: "https://github.com/PhantomOffKanagawa/SpotControl",
+    icon: <LucideMonitorPlay size="75%" />,
+    featured: true,
+    categories: ["C#", "Github Actions"],
   },
   {
     key: "availability-planner",
     title: "Availability Planner",
     description:
-      "Availability Planner to help plan out your week and see when you're free.",
-    link: "https://phantomoffkanagawa.github.io/AvailabilityPlanner/",
+      "Availability Planner to help plan out your week and see when you",
     repo: "https://github.com/PhantomOffKanagawa/AvailabilityPlanner",
+    link: "https://phantomoffkanagawa.github.io/AvailabilityPlanner/",
     icon: <Calendar size="75%" />,
-    featured: true,
-    categories: ["Web App"],
+    categories: ["Web App", "HTML"],
   },
   {
-    key: "portfolio",
-    title: "Portfolio Website",
-    description: "Personal portfolio website to showcase my projects and experiences.",
-    link: "https://phantomoffkanagawa.github.io/portfolio/",
-    repo: "https://github.com/PhantomOffKanagawa/portfolio",
-    icon: <Home size="75%" />,
-    featured: true,
-    categories: ["Web App"],
+    key: "iclothing-app",
+    title: "IClothing Application",
+    description:
+      "Fullstack class project web application for a clothing store in ASP.NET Web.",
+    repo: "https://github.com/PhantomOffKanagawa/IClothingApplication",
+    icon: <Shirt size="75%" />,
+    categories: ["Web App", "C#"],
   },
   {
-    key: "fastpass",
-    title: "Disney FastPass Ornament",
-    description: "Arduino-powered NFC reader with animated RGB ring light.",
-    icon: <Siren size="75%" />,
+    key: "lean-green",
+    title: "Tiger Hacks ",
+    description:
+      "Web app & Extension for sharing and rating recipes based on carbon footprint.",
+    repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
+    link: "https://leangreen.club/",
+    icon: <ForkKnife size="75%" />,
+    categories: ["Web App", "React", "Web Extension"],
   },
   {
     key: "laser-tag",
@@ -100,16 +125,24 @@ const projects: Project[] = [
       "Hardware and software system for registering laser hits with IoT APIs.",
     repo: "https://github.com/PhantomOffKanagawa/Home-Hosted-Laser-Arcade",
     icon: <Gamepad size="75%" />,
+    categories: ["IoT", "Hardware"],
   },
   {
-  key: "lean-green",
-    title: "Tiger Hacks 'Lean Green' Recipe Site",
+    key: "fastpass",
+    title: "Disney FastPass Ornament",
     description:
-      "Web app & Extension for sharing and rating recipes based on carbon footprint.",
-    // link: "https://leangreen.com/",
-    repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
-    icon: <ForkKnife size="75%" />,
-    categories: ["Web App"],
+      "Arduino-powered Magic Band reactive NFC reader with animated RGB lights.",
+    link: "https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2YvYy8xZTI2ZWFmZDgwZTc1MmRkL0VubTFXNHhhM2M1Q2xjNHhNdDBVeW84QmE0MTdaY0NXd1hnTVFuaUNjZmtjbnc&id=1E26EAFD80E752DD%21s8c5bb579dd5a42ce95ce3132dd14ca8f&cid=1E26EAFD80E752DD",
+    icon: <Siren size="75%" />,
+    categories: ["Hardware"],
+  },
+  {
+    key: "and-more",
+    title: "And More...",
+    description:
+      "I have many more projects on my GitHub, Check them out!",
+    link: "https://github.com/PhantomOffKanagawa",
+    icon: <Github size="75%" />,
   }
 ];
 
