@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Project from "./pages/Project";
+// import Project from "./pages/Project";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, defaultSystem, Theme } from "@chakra-ui/react";
 import { ThemeProvider, useTheme } from "@contexts/ThemeContext";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AllProjects from "pages/AllProjects";
+import CategoryProjects from "pages/CategoryProjects";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,8 +19,9 @@ const RoutedPage = () => {
   return (
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/project/:projectName" element={<Project />} />
+      {/* <Route path="/project/:projectName" element={<Project />} /> */}
       <Route path="/projects" element={<AllProjects />} />
+      <Route path="/category/:categoryName" element={<CategoryProjects />} />
       {/* <Route path="/resume" element={<Resume />} /> */}
     </Routes>
   );

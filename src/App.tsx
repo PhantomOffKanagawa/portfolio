@@ -14,6 +14,7 @@ import Skills from "@components/Skills";
 import Experience from "@components/Experience";
 import Education from "@components/Education";
 import Links from "@components/Links";
+import FloatingGithubLink from "@components/ui/floating-icon";
 
 const App: React.FC = () => {
   const featuredProjects = Values.projects.filter(p => p.featured); // Filter featured projects
@@ -79,6 +80,9 @@ const App: React.FC = () => {
           {/* Footer */}
           <Footer />
         </VStack>
+
+        {/* Floating GitHub Link */}
+        <FloatingGithubLink />
       </Box>
   );
 };
