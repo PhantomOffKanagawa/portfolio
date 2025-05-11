@@ -26,8 +26,7 @@ const FloatingGithubLink = ({ link, text }: FloatingGithubLinkProps) => {
                 borderRadius="full"
                 variant="ghost"
                 size="2xl"
-                px={6}
-                gap={2}
+                px={{ base: 0, lg: 6 }}
             >
                 <Github color="currentColor" />
             <Box
