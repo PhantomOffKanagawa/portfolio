@@ -31,6 +31,7 @@ const projects: Project[] = [
     description:
       "MERN + GraphQL fullstack meal planner with a easy drag and drop interface.",
     repo: "https://github.com/PhantomOffKanagawa/MealGen",
+    link: "https://dnd-mealgen.vercel.app/",
     icon: <ForkKnife size="75%" />,
     featured: true,
     categories: ["Web App", "React"],
