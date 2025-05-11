@@ -86,6 +86,7 @@ const projects: Project[] = [
     description:
       "Spot Control is a WPF spotify playback controller with a custom UI.",
     repo: "https://github.com/PhantomOffKanagawa/SpotControl",
+    link: "https://github.com/PhantomOffKanagawa/SpotControl/releases/latest",
     icon: <LucideMonitorPlay size="75%" />,
     featured: true,
     categories: ["C#", "Github Actions"],
