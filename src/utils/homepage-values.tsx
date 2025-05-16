@@ -1,4 +1,4 @@
-import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2, University, School, BriefcaseBusiness, HelpingHand, Shirt, LucideMonitorPlay } from "lucide-react";
+import { BusFront, Calendar, ForkKnife, Gamepad, Siren, Github, Linkedin, FileDownIcon, Home, School2, University, School, BriefcaseBusiness, HelpingHand, Shirt, LucideMonitorPlay, MapIcon, TreeDeciduous, Building, Terminal, Skull } from "lucide-react";
 
 export type Project = {
     key: string;
@@ -6,6 +6,10 @@ export type Project = {
     description: string;
     link?: string;
     repo?: string;
+    custom_link?: {
+      href: string;
+      text: string;
+    }
     icon: JSX.Element;
     image?: string;
     featured?: boolean;
@@ -92,10 +96,29 @@ const projects: Project[] = [
     categories: ["C#", "Github Actions"],
   },
   {
+    key: "lost-in-lafferre",
+    title: "Lost in Lafferre",
+    description:
+      "A web app to help students find their way around Lafferre Hall at Mizzou.",
+    repo: "https://github.com/Spidious/LostInLafferre_Frontend",
+    link: "https://lost-in-lafferre.vercel.app/",
+    icon: <Building size="75%" />,
+    categories: ["Web App", "Next.js"],
+  },
+  {
+    key: "local-bytes",
+    title: "Local Bytes",
+    description:
+      "A MEAN local session-based restaurant discovery and review app for COMO.",
+    repo: "https://github.com/PhantomOffKanagawa/LocalBytes",
+    icon: <MapIcon size="75%" />,
+    categories: ["Web App", "Angular", "MongoDB"],
+  },
+  {
     key: "availability-planner",
     title: "Availability Planner",
     description:
-      "Availability Planner to help plan out your week and see when you",
+      "Availability Planner to compare and plan out your availability with friends.",
     repo: "https://github.com/PhantomOffKanagawa/AvailabilityPlanner",
     link: "https://phantomoffkanagawa.github.io/AvailabilityPlanner/",
     icon: <Calendar size="75%" />,
@@ -117,7 +140,7 @@ const projects: Project[] = [
       "Web app & Extension for sharing and rating recipes based on carbon footprint.",
     repo: "https://github.com/PhantomOffKanagawa/TigerHacks2024Project",
     link: "https://leangreen.club/",
-    icon: <ForkKnife size="75%" />,
+    icon: <TreeDeciduous size="75%" />,
     categories: ["Web App", "React", "Web Extension"],
   },
   {
@@ -139,11 +162,34 @@ const projects: Project[] = [
     categories: ["Hardware"],
   },
   {
+    key: "user-readme",
+    title: "Neofetch User README",
+    description:
+      "A self-updating gif README for my GitHub profile inspired by Neofetch.",
+    repo: "https://github.com/PhantomOffKanagawa/PhantomOffKanagawa",
+    link: "https://github.com/PhantomOffKanagawa",
+    icon: <Terminal size="75%" />,
+    categories: ["Python", "Github Actions"],
+  },
+  {
+    key: "deviant-ops",
+    title: "Deviant Ops",
+    description:
+      "A fun github action that passes only cheerful, emoji-filled PRs.",
+    repo: "https://github.com/PhantomOffKanagawa/Deviant-Ops",
+    link: "https://github.com/PhantomOffKanagawa/deviant-ops/pulls",
+    icon: <Skull size="75%" />,
+    categories: ["AI", "Github Actions"],
+  },
+  {
     key: "and-more",
     title: "And More...",
     description:
       "I have many more projects on my GitHub, Check them out!",
-    link: "https://github.com/PhantomOffKanagawa",
+    custom_link: {
+      href: "https://github.com/PhantomOffKanagawa",
+      text: "GitHub",
+    },
     icon: <Github size="75%" />,
   }
 ];

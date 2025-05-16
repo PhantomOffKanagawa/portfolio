@@ -92,33 +92,46 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => (
           )}
 
           {/* Trying out whole card links */}
-          <Box
+            <Box
             display="flex"
-            justifyContent="space-between"
+            justifyContent={project.link || project.repo ? "space-between" : "center"}
             alignItems="center"
             flexWrap="wrap"
-            gap={0}
+            gap={2}
             mt="auto"
-          >
+            >
             {project.link && (
               <Link
-                href={project.link}
-                color="colorPalette.500"
-                fontSize={["sm", "md"]}
+              href={project.link}
+              color="colorPalette.500"
+              fontSize={["sm", "md"]}
+              order={1}
               >
-                View Demo
+              View Demo
+              </Link>
+            )}
+            {project.custom_link && !project.link && !project.repo && (
+              <Link
+              href={project.custom_link.href}
+              color="colorPalette.500"
+              fontSize={["sm", "md"]}
+              order={2}
+              >
+              {project.custom_link.text}
               </Link>
             )}
             {project.repo && (
               <Link
-                href={project.repo}
-                color="colorPalette.500"
-                fontSize={["sm", "md"]}
+              href={project.repo}
+              color="colorPalette.500"
+              fontSize={["sm", "md"]}
+              order={3}
+              marginLeft="auto"
               >
-                View Repo
+              View Repo
               </Link>
             )}
-          </Box>
+            </Box>
         </Box>
       </Box>
       // </RouterLink>
